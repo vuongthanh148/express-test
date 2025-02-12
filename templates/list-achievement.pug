@@ -1,0 +1,6 @@
+html
+  body
+    ul
+      each achievement in achievements
+        li
+          a(href=`/achievement/${achievement.id}/detail`)= achievement.title

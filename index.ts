@@ -1,4 +1,5 @@
 import express from "express";
+import achievementRouter from "./routes/achievement";
 import adminRouter from "./routes/admin";
 import profileRouter from "./routes/profile";
 import prophecyRouter from "./routes/prophecy";
@@ -11,6 +12,7 @@ app.use("/admin", adminRouter);
 app.use("/public", publicRouter);
 app.use("/prophecy", prophecyRouter);
 app.use("/profile", profileRouter);
+app.use("/achievement", achievementRouter);
 
 app.listen(HTTP_PORT, () => {
   console.log(`server listening on ${HTTP_PORT}`);

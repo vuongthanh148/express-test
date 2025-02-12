@@ -8,6 +8,7 @@ html
         ul
           li: a(href="#landing") Home
           li: a(href="#projects") Projects
+          li: a(href="#achievement") Achievement
           li: a(href="#about") About
     section#landing
       h1 Welcome to My Profile
@@ -17,15 +18,18 @@ html
     section#projects
       h1 Past Projects
       ul
-        li
-          h2 CFW
-          p A management system for a wholesale platform in Thailand.
-        li
-          h2 Janus Finance
-          p A token gateway allow user to swap token, manage portfolio and look for top DEFI protocol
-        li
-          h2 Giigle
-          p A url shortener website that clone bit.ly and enhance it with more features
+        each project in projects
+          li
+            h2= project.name
+            p= project.detail
+    section#achievements
+      h1 Achievements
+      ul
+        each achievement in achievements
+          li
+            h2= achievement.title
+            p= achievement.detail
+            small= achievement.date
     section#about
       h1 About Me
       p This page contains information about me.
